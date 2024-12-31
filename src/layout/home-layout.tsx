@@ -1,4 +1,4 @@
-import Footer from "../components/Home/footer";
+// import Footer from "../components/Home/footer";
 import Cursor from "../components/ui/cursor";
 
 

@@ -43,8 +43,8 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
-      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-20">
+    <div className="max-w-sm md:max-w-4xl mx-auto antialiased px-4 md:px-8 lg:px-12 py-20">
+      <div className="relative grid grid-cols-1 md:grid-cols-2  gap-10">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -92,7 +92,7 @@ export const AnimatedTestimonials = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4">
+        <div className="flex justify-between bg-white text-black flex-col p-4 rounded-md">
           <motion.div
             key={active}
             initial={{
@@ -112,14 +112,14 @@ export const AnimatedTestimonials = ({
               ease: "easeInOut",
             }}
           >
-            <h3 className="text-2xl font-bold dark:text-white text-white">
+            <h3 className="text-2xl font-bold dark:text-white ">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-gray-100 dark:text-neutral-500">
+            <p className="text-sm text-[#FF007A] dark:text-neutral-500">
               {testimonials[active].designation}
             </p>
-            <motion.p className="text-lg text-white mt-8 dark:text-neutral-300">
-              {testimonials[active].quote.split("").map((word, index) => (
+            <motion.p className="text-lg  mt-8 dark:text-neutral-300">
+              {testimonials[active].quote.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
                   initial={{

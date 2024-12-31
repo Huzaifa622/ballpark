@@ -5,7 +5,7 @@ import Layout from "../layout/layout";
 import Section1 from "../components/Home/section-1";
 import Section2 from "../components/Home/section-2";
 import Section3 from "../components/Home/section-3";
-import Footer from "../components/ui/footer";
+// import Footer from "../components/ui/footer";
 import Template from "../layout/template";
 
 const Home = () => {

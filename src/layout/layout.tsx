@@ -12,7 +12,7 @@ export default function Layout() {
       {/* <Header /> */}
       <Vortex
        rangeY={800}
-       particleCount={100}
+       particleCount={200}
        baseHue={120}
        className="bg-transparent">
       <AuroraBackground>

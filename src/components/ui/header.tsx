@@ -1,11 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { Link, useLocation } from "react-router-dom";
-import { scrollTo } from "../../lib/scroll"; // Assuming scrollTo is defined elsewhere
+import {  useLocation } from "react-router-dom";
+// import { scrollTo } from "../../lib/scroll"; // Assuming scrollTo is defined elsewhere
 import TransitionLink from "../TransitionLink";
 
 export default function Header() {
-  const location = useLocation();
+  // const location = useLocation();
 
   // GSAP animation setup
   useGSAP(() => {

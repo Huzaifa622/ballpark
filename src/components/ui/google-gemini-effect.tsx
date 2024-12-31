@@ -1,5 +1,5 @@
 "use client";
-import { scrollTo } from "../../lib/scroll";
+// import { scrollTo } from "../../lib/scroll";
 import { cn } from "../../lib/utils";
 import { motion, MotionValue } from "framer-motion";
 import { CoolMode } from "./cool-mode";

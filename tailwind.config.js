@@ -57,6 +57,7 @@ export default {
   			],
 			poppins:["Poppins"],
 			Roboto:["Roboto"],
+			dance:["Dancing Script"],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
