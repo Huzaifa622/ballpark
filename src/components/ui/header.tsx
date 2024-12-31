@@ -1,6 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import {  useLocation } from "react-router-dom";
+// import {  useLocation } from "react-router-dom";
 // import { scrollTo } from "../../lib/scroll"; // Assuming scrollTo is defined elsewhere
 import TransitionLink from "../TransitionLink";
 
