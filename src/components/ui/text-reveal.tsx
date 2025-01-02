@@ -4,15 +4,18 @@ import { FC, ReactNode, useRef } from "react";
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 
 import { cn } from "../../lib/utils";
+import BoxReveal from "./box-reveal";
 
 interface TextRevealByWordProps {
   text: string;
   className?: string;
+  title?:string;
 }
 
 export const TextRevealByWord: FC<TextRevealByWordProps> = ({
   text,
   className,
+  title
 }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
 
@@ -25,13 +28,22 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
     <div ref={targetRef} className={cn("relative z-0 h-[200vh]", className)}>
       <div
         className={
-          "sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
+          "sticky top-0 mx-auto h-[50%]  my-auto flex flex-col justify-center max-w-4xl items-center  bg-transparent "
         }
       >
+        <BoxReveal>
+                      <h1
+                        className="text-center text-4xl font-bold bg-white mb-2 text-[#FF007A] 
+                               p-2 rounded uppercase"
+                      >
+                      {title}
+        
+                      </h1>
+                    </BoxReveal>
         <p
           ref={targetRef}
           className={
-            "flex flex-wrap  text-sm font-bold text-white   md:text-3xl  lg:text-xl xl:text-xl"
+            "flex flex-wrap  text-sm font-bold text-black bg-white p-4 rounded-md  md:text-3xl  lg:text-xl xl:text-xl"
           }
         >
           {words.map((word, i) => {
@@ -61,10 +73,10 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="xl:lg-3 relative mx-1">
-      <span className={"absolute opacity-30"}>{children}</span>
+      <span className={"absolute blur-[2px] opacity-30"}>{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-white"}
+        className={"text-black"}
       >
         {children}
       </motion.span>

@@ -7,11 +7,14 @@ import Section2 from "../components/Home/section-2";
 import Section3 from "../components/Home/section-3";
 // import Footer from "../components/ui/footer";
 import Template from "../layout/template";
+// import { useLayoutEffect, useRef } from "react";
 
 const Home = () => {
-  
+ 
   return (
     <Template>
+   
+
       <div className="relative text-white panel">
         <Layout />
         <Herobanner />
@@ -27,7 +30,8 @@ const Home = () => {
       </div>
       {/* <div className="panel z-[99999999999999]" id="join">
         <Footer />
-      </div> */}
+        </div> */}
+    
     </Template>
   );
 };

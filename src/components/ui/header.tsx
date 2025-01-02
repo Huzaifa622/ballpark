@@ -45,14 +45,14 @@ export default function Header() {
   return (
     <div className="w-[80%] mx-auto bg-transparent text-white h-10">
       <div className="font-signika absolute items-center text-xs flex justify-between w-[80%] logo text-center bg-transparent tracking-widest uppercase leading-[50px] font-bold">
-        <h1 className="text-lg flex gap-2 items-center">
-          <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>  <TransitionLink href="/" className="text-lg"  label="Ball Park"/>
+        <h1 className="text-lg flex gap-2 items-center relative z-40">
+          <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>  <TransitionLink href="/" className="text-lg "  label="Ball Park"/>
         </h1>
         <div className="flex gap-4">
           {/* "About" section */}
        
           {/* Link to Navigating Park */}
-          <h4 className="cursor-pointer">
+          <h4 className="cursor-pointer relative z-40">
             <TransitionLink href="/navigating-park" label="Navigation Park"/>
           </h4>
         </div>

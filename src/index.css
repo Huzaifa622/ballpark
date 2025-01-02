@@ -56,3 +56,18 @@ body::-webkit-scrollbar {
     background-position: 0% 50%;
   }
 }
+
+@keyframes gradientBackgroundAnimation {
+  0% {
+    --gradient-background-start: #B3DEF2;
+    --gradient-background-end: #F1F6F8;
+  }
+  50% {
+    --gradient-background-start: #FF007A;
+    --gradient-background-end: #B3DEF2;
+  }
+  100% {
+    --gradient-background-start: #B3DEF2;
+    --gradient-background-end: #F1F6F8;
+  }
+}
