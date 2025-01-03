@@ -4,7 +4,7 @@ const ToggleSwitch = ({setOpen , open}:{setOpen:React.Dispatch<boolean>; open:bo
 <>
 
 <label className="switch">
-  <input type="checkbox" onClick={()=>setOpen(!open)}/>
+  <input type="checkbox" checked={open} onClick={()=>setOpen(!open)}/>
   <span className="wrapper">
     <span className="row">
       <span className="dot"></span>

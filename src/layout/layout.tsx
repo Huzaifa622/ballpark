@@ -77,7 +77,7 @@ export default function Layout() {
         // <BackgroundGradientAnimation  >
         <div
           id="intro-slider"
-          className="h-screen fixed p-10 bg-gradient-to-r from-[#ffffff] to-[#73c2b7] text-[#FF007A] top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
+          className=" fixed p-10 bg-gradient-to-r from-[#ffffff] to-[#73c2b7] text-[#FF007A] top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
         >
 
           <svg
