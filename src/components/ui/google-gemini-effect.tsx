@@ -1,17 +1,18 @@
 "use client";
 // import { scrollTo } from "../../lib/scroll";
 import { cn } from "../../lib/utils";
-import { motion, MotionValue } from "framer-motion";
+import {MotionValue } from "framer-motion";
 import { CoolMode } from "./cool-mode";
+import { Link } from "react-router-dom";
 // import React from "react";
 
-const transition = {
-  duration: 0,
-  ease: "linear",
-};
+// const transition = {
+//   duration: 0,
+//   ease: "linear",
+// };
 
 export const GoogleGeminiEffect = ({
-  pathLengths,
+  // pathLengths,
   // title,
   description,
   className,
@@ -39,7 +40,7 @@ export const GoogleGeminiEffect = ({
           className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto "
         >
           <CoolMode>
-            <button>Join Us</button>
+            <Link to={"https://ball-park-beta.vercel.app/"}>Join Us</Link>
           </CoolMode>
         </button>
       </div>

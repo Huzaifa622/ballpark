@@ -5,7 +5,7 @@ import { AuroraBackground } from "../components/ui/aurora-background";
 import { Vortex } from "../components/ui/vortex";
 // import { WavyBackground } from "../components/ui/wavy-background";
 
-import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
+// import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export default function Layout() {
   const comp = useRef(null);
@@ -21,6 +21,10 @@ export default function Layout() {
       sessionStorage.setItem("hasSeenIntro", "true");
     }
   }, []);
+
+  // useEffect(()=>{
+  //   setShowIntro(true);
+  // },[window.location.reload])
 
   useLayoutEffect(() => {
     if (!startAnimation) return;
@@ -63,17 +67,19 @@ export default function Layout() {
       }
     );
 
-    return () => line.kill();
+    return () => {line.kill()};
   }, [showIntro]);
 
   return (
     <div className="relative" ref={comp}>
       {showIntro && (
-       <BackgroundGradientAnimation containerClassName="fixed z-50">
+      
+        // <BackgroundGradientAnimation  >
         <div
           id="intro-slider"
-          className="h-screen p-10  fixed text-[#FF007A] top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
+          className="h-screen fixed p-10 bg-gradient-to-r from-[#ffffff] to-[#73c2b7] text-[#FF007A] top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
         >
+
           <svg
             version="1.1"
             id="Layer_1"
@@ -82,7 +88,7 @@ export default function Layout() {
             x="0px"
             y="0px"
             viewBox="0 0 1000 1000"
-            style={{ background: "new 0 0 1000 1000", cursor: "pointer" }}
+            style={{ background: "new 0 0 1000 1000", cursor: "pointer" , zIndex: "50" }}
             xmlSpace="preserve"
             onClick={() => setStartAnimation(true)}
           >
@@ -110,11 +116,12 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
               />
             </g>
           </svg>
-          <p className="text-black uppercase tracking-widest absolute font-Roboto  text-xs top-32 animate-bounce">
+          <p className="text-black z-50 uppercase tracking-widest absolute font-Roboto  text-xs top-32 animate-bounce">
             Click to enter
           </p>
         </div>
-        </BackgroundGradientAnimation>
+          // </BackgroundGradientAnimation>
+        
       )}
 
       <div className="bg-[url('/assets/background-bg.jpg')] welcome bg-no-repeat bg-cover z-[-9] fixed top-0 h-screen w-full text-white ">
@@ -126,7 +133,7 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
         >
           <AuroraBackground>
             <Particles
-              className="absolute inset-0"
+              className="absolute inset-0 h-fit"
               quantity={100}
               ease={100}
               color={"#ffffff"}
