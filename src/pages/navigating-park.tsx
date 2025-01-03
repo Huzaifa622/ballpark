@@ -4,12 +4,12 @@ import Layout from "../layout/layout";
 
 export default function NavPark() {
   return (
-    <div className="h-screen overflow-auto example ">
+    <div className="h-screen  example ">
     <Template>
       <Layout />
-      <div className="">
+      {/* <div className=""> */}
       <NavDescription />
-      </div>
+      {/* </div> */}
     </Template>
     </div>
   );
