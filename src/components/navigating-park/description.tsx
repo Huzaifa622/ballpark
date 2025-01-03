@@ -1,6 +1,6 @@
 export default function NavDescription() {
     return (
-      <div className="max-w-5xl mx-auto p-6 mt-12 z-40 example  h-fit overflow-hidden relative">
+      <div className="max-w-5xl mx-auto p-6 mt-12 z-30 example bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 h-fit overflow-hidden relative">
         <h1 className="text-3xl font-semibold text-white">MAKE AN ACCOUNT</h1>
         <p className="text-lg text-white mb-4">Head over to LOGIN and CREATE A NEW ACCOUNT.</p>
   

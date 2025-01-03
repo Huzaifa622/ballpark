@@ -4,10 +4,10 @@ import Layout from "../layout/layout";
 
 const Ball = () => {
   return (
-    <div className="h-screen overflow-auto example flex flex-col">
+    <div className="h-screen overflow-auto example ">
       <Template>
         <Layout />
-        <div className="h-screen">
+        <div className="">
           <BallPark />
         </div>
       </Template>
