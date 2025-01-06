@@ -199,7 +199,7 @@ PDF’ or ‘Email suppliers’
                     
                                   </h1>
                                 </BoxReveal>
-                                <Link to={"https://ball-park-beta.vercel.app/"} className="bg-white font-semibold text-[#FF007A] p-2 text-lg rounded-md" >Let's Get Started</Link></div>
+                                <Link to={"https://ball-park-beta.vercel.app/login"} className="text-white  font-semibold bg-[#FF007A] p-2 text-lg rounded-full" >Let's Get Started</Link></div>
             {/* <div className="h-[200vh]">
             <div className="">
               <TextRevealByWord text="Our quoting system not only saves your designs and their cost breakdowns but also comes stocked with price and material breakdowns common custom extras such as flats and step-and-repeats, complete with their technical drawings. Plus, when you join our community, you’ll unlock a treasure trove of material costs, all neatly organised in our quoting system with links on where to purchase." />
