@@ -35,9 +35,7 @@ const [visible,setVisible] = useState(false)
         duration: 1, // Smooth duration
         ease: "power1.inOut",
         onComplete: () => {
-          const gifElement = document.querySelector(
-            "#glass-video"
-          ) as HTMLElement;
+      
           
             setVisible(true) 
             setTimeout(()=>{
