@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextRevealByWord from "../ui/text-reveal";
 import BoxReveal from "../ui/box-reveal";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,13 +15,13 @@ const [visible,setVisible] = useState(false)
 
   useEffect(() => {
     audioRef.current = new Audio("/assets/break.mp3");
-
+ 
     // Create a timeline for the ball animation
     const ballTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#ball", // Target the ball image
         start: "top center", // Start when the top of the ball reaches the center of the viewport
-        end: "+=8000vh", // Duration of the pinned animation
+        end:  `+=${window.screen.height * 10}px`, // Duration of the pinned animation
         pin: true, // Pin the ball
         scrub: 1, // Smooth animation based on scroll
       },
@@ -189,7 +190,7 @@ PDF’ or ‘Email suppliers’
                 />
               </div>
             </div>
-            <div className="flex justify-center">   <BoxReveal>
+            <div className="flex flex-col items-center justify-center">   <BoxReveal>
                                   <h1
                                     className="text-center  text-4xl font-bold bg-white mb-2 text-[#FF007A] 
                                            p-2 rounded uppercase"
@@ -197,7 +198,8 @@ PDF’ or ‘Email suppliers’
                                   {"No more smoke and mirrors. Lets get onto the enjoyable stuff"}
                     
                                   </h1>
-                                </BoxReveal></div>
+                                </BoxReveal>
+                                <Link to={"https://ball-park-beta.vercel.app/"} className="bg-white font-semibold text-[#FF007A] p-2 text-lg rounded-md" >Let's Get Started</Link></div>
             {/* <div className="h-[200vh]">
             <div className="">
               <TextRevealByWord text="Our quoting system not only saves your designs and their cost breakdowns but also comes stocked with price and material breakdowns common custom extras such as flats and step-and-repeats, complete with their technical drawings. Plus, when you join our community, you’ll unlock a treasure trove of material costs, all neatly organised in our quoting system with links on where to purchase." />

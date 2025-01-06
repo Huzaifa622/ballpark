@@ -11,7 +11,7 @@ export default function Section2() {
             Our Services
           </h1>
         </BoxReveal>
-        <div className=" z-[20] relative h-full p-4 flex md:flex-row flex-col-reverse my-8  ">
+        <div className=" z-[20] relative h-full p-4 flex items-center md:flex-row flex-col-reverse my-8  ">
           <div className="md:w-[70%]">
             <TextGenerateEffect
             className="text-left"
