@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TextRevealByWord from "../ui/text-reveal";
+import BoxReveal from "../ui/box-reveal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,7 +20,7 @@ const [visible,setVisible] = useState(false)
       scrollTrigger: {
         trigger: "#ball", // Target the ball image
         start: "top center", // Start when the top of the ball reaches the center of the viewport
-        end: "+=7000vh", // Duration of the pinned animation
+        end: "+=8000vh", // Duration of the pinned animation
         pin: true, // Pin the ball
         scrub: 1, // Smooth animation based on scroll
       },
@@ -101,15 +102,15 @@ const [visible,setVisible] = useState(false)
           </div>
         </div>
         <div className="my-12 mx-auto max-w-screen-2xl ">
-          <div className="h-[10%] bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 sticky z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-bold  flex text-[#FF007A]  justify-center items-center ">
+          <div className="h-[10%]  sticky z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-bold  flex text-[#FF007A]  justify-center items-center ">
             <div className="bg-white p-4 rounded-md">
               Plan Your Event Budget in Minutes
             </div>
           </div>
           <div>
-            <div className="flex">
-              <div className="w-[50%]"></div>
-              <div className="h-[200vh] w-[40%] my-12 flex justify-center flex-col items-center">
+            {/* <div className="flex"> */}
+              
+              <div className="h-[200vh]  my-12 flex justify-center flex-col items-center">
                 {/* <BoxReveal>
               <h1
                 className="text-center text-4xl font-bold text-[#FF007A] 
@@ -126,7 +127,7 @@ const [visible,setVisible] = useState(false)
 "
                 />
               </div>
-            </div>
+            {/* </div> */}
             <div className="h-[200vh]">
               <div className="">
                 <TextRevealByWord
@@ -175,6 +176,28 @@ AI will:
                 />
               </div>
             </div>
+            <div className="h-[200vh]">
+              <div className="">
+                <TextRevealByWord
+                  title="Lastly
+"
+                  text="Now you’ve costed for everything. What’s next? We have a built in invoicing system. You can
+simply use the drop downs to calculate the birds eye view cost. You then can either ‘save as
+PDF’ or ‘Email suppliers’
+
+"
+                />
+              </div>
+            </div>
+            <div className="flex justify-center">   <BoxReveal>
+                                  <h1
+                                    className="text-center  text-4xl font-bold bg-white mb-2 text-[#FF007A] 
+                                           p-2 rounded uppercase"
+                                  >
+                                  {"No more smoke and mirrors. Lets get onto the enjoyable stuff"}
+                    
+                                  </h1>
+                                </BoxReveal></div>
             {/* <div className="h-[200vh]">
             <div className="">
               <TextRevealByWord text="Our quoting system not only saves your designs and their cost breakdowns but also comes stocked with price and material breakdowns common custom extras such as flats and step-and-repeats, complete with their technical drawings. Plus, when you join our community, you’ll unlock a treasure trove of material costs, all neatly organised in our quoting system with links on where to purchase." />

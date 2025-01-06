@@ -12,11 +12,11 @@ createRoot(document.getElementById("root")!).render(
     {/* <BrowserRouter> */}
     {/* <Template> */}
     
-      <TracingBeam className="z-[999999999999999999999999999999999999]">
+      {/* <TracingBeam className="z-[999999999999999999999999999999999999]"> */}
         <div className="main font-Roboto   ">
           <App />
         </div>
-      </TracingBeam>
+      {/* </TracingBeam> */}
       {/* </Template> */}
     {/* </BrowserRouter> */}
   </StrictMode>
