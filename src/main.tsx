@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 
-import { TracingBeam } from "./components/ui/tracing-beam.tsx";
+// import { TracingBeam } from "./components/ui/tracing-beam.tsx";
 // import { BrowserRouter } from "react-router-dom";
 // import Template from "./layout/template.tsx";
 
