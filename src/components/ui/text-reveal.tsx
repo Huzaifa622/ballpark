@@ -73,7 +73,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
   const opacity = useTransform(progress, range, [0, 1]);
   return (
     <span className="xl:lg-3 relative mx-1">
-      <span className={"absolute blur-[2px] opacity-30"}>{children}</span>
+      <span className={"absolute  opacity-30"}>{children}</span>
       <motion.span
         style={{ opacity: opacity }}
         className={"text-black"}

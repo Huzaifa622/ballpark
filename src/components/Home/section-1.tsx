@@ -41,7 +41,7 @@ const [visible,setVisible] = useState(false)
             setVisible(true) 
             setTimeout(()=>{
               setVisible(false) 
-            },1000)
+            },3000)
            // Show the GIF
           
           if(audioRef.current){
