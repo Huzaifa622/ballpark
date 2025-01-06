@@ -54,7 +54,7 @@ const Herobanner = () => {
     //   </div>
     // </div>
     <div
-    className="h-[300vh] bg-transparent w-full dark:border dark:border-white/[0.1] rounded-md relative pt-0 overflow-clip"
+    className="h-[100vh] bg-transparent w-full dark:border dark:border-white/[0.1] rounded-md relative pt-0 overflow-clip"
     ref={ref}
   >
     <GoogleGeminiEffect
