@@ -3,11 +3,24 @@ import gsap from "gsap";
 import Particles from "../components/ui/particles";
 import { AuroraBackground } from "../components/ui/aurora-background";
 import { Vortex } from "../components/ui/vortex";
+import { GoogleGeminiEffect } from "../components/ui/google-gemini-effect";
+import { useScroll, useTransform } from "framer-motion";
 // import { WavyBackground } from "../components/ui/wavy-background";
 
 // import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export default function Layout() {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+ 
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
   const comp = useRef(null);
   const [showIntro, setShowIntro] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
@@ -124,7 +137,7 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
         
       )}
 
-      <div className="bg-[url('/assets/background-bg.jpg')] welcome bg-no-repeat bg-cover z-[-9] fixed top-0 h-screen w-full text-white ">
+      <div className="bg-[url('/assets/background-bg.jpg')] welcome bg-no-repeat bg-cover z-[-9]     top-0 h-screen w-full text-white ">
         <Vortex
           rangeY={800}
           particleCount={200}
@@ -139,7 +152,20 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
               color={"#ffffff"}
               refresh
             />
-            <div></div>
+              <div
+               className="h-[100vh] bg-transparent w-full dark:border dark:border-white/[0.1] rounded-md relative pt-0 overflow-clip"
+               ref={ref}
+             >
+               <GoogleGeminiEffect
+                 pathLengths={[
+                   pathLengthFirst,
+                   pathLengthSecond,
+                   pathLengthThird,
+                   pathLengthFourth,
+                   pathLengthFifth,
+                 ]}
+               />
+             </div>
           </AuroraBackground>
         </Vortex>
       </div>

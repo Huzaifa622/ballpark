@@ -33,7 +33,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
       >
         <BoxReveal>
                       <h1
-                        className="text-center text-4xl font-bold bg-white mb-2 text-[#FF007A] 
+                        className="text-center text-4xl font-bold  mb-2 text-[#FF007A] 
                                p-2 rounded uppercase"
                       >
                       {title}
@@ -43,7 +43,7 @@ export const TextRevealByWord: FC<TextRevealByWordProps> = ({
         <p
           ref={targetRef}
           className={
-            "flex flex-wrap  text-sm font-bold text-black bg-white p-4 rounded-md  md:text-3xl  lg:text-xl xl:text-xl"
+            "flex flex-wrap  text-sm font-bold text-[#1B2978]  p-4 rounded-md  md:text-3xl  lg:text-xl xl:text-xl"
           }
         >
           {words.map((word, i) => {
@@ -76,7 +76,7 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
       <span className={"absolute  opacity-30"}>{children}</span>
       <motion.span
         style={{ opacity: opacity }}
-        className={"text-black"}
+        className={"text-[#1B2978]"}
       >
         {children}
       </motion.span>

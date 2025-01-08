@@ -1,35 +1,35 @@
-// import Section1 from "../components/Home/section-1"
-// import Header from "../components/ui/header"
+
 import Herobanner from "../components/Home/hero-banner";
-import Layout from "../layout/layout";
-import Section1 from "../components/Home/section-1";
 import Section2 from "../components/Home/section-2";
 import Section3 from "../components/Home/section-3";
-// import Footer from "../components/ui/footer";
 import Template from "../layout/template";
-// import { TracingBeam } from "../components/ui/tracing-beam";
-// import { useLayoutEffect, useRef } from "react";
+import Section4 from "../components/Home/section-4";
+import Section1 from "../components/Home/section-1";
+
 
 const Home = () => {
  
   return (
     <Template>
    
-      <div className="relative text-white panel">
+      {/* <div className="relative text-white panel scroll-smooth"> */}
    {/* <TracingBeam className="z-[999999999999999999999999999999999999]"> */}
-        <Layout />
+        {/* <Layout /> */}
         <Herobanner />
         <div id="about">
           <Section1 />
         </div>
-        <div id="services">
+        <div id="about">
           <Section2 />
         </div>
-        <div id="testimonals">
+        <div id="services">
           <Section3 />
         </div>
+        <div id="testimonals">
+          <Section4 />
+        </div>
       {/* </TracingBeam> */}
-      </div>
+      {/* </div> */}
       {/* <div className="panel z-[99999999999999]" id="join">
         <Footer />
         </div> */}

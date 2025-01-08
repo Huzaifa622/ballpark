@@ -45,7 +45,8 @@ export default function Header() {
   // };
 
   return (
-    <div className="w-[80%] mx-auto bg-transparent text-white h-10">
+    <div className="fixed z-40 w-full   " >
+    <div className="w-[80%]  mx-auto bg-transparent text-white h-10">
       <div className="font-signika absolute items-center text-xs top-4 flex justify-between w-[80%] logo text-center bg-transparent tracking-widest uppercase leading-[50px] font-bold">
         <h1 className="text-lg flex gap-2 items-center relative z-40">
           <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>{" "}
@@ -110,6 +111,7 @@ export default function Header() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
