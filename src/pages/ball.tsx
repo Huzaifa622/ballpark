@@ -1,6 +1,6 @@
 import Template from "../layout/template";
 import BallPark from "../components/ball-park/ball-park";
-import Layout from "../layout/layout";
+// import Layout from "../layout/layout";
 
 const Ball = () => {
   return (

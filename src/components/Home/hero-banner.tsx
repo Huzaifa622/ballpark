@@ -3,8 +3,8 @@ import gsap from "gsap";
 import Particles from "../../components/ui/particles";
 import { AuroraBackground } from "../../components/ui/aurora-background";
 import { Vortex } from "../../components/ui/vortex";
-import { GoogleGeminiEffect } from "../../components/ui/google-gemini-effect";
-import { useScroll, useTransform } from "framer-motion";
+// import { GoogleGeminiEffect } from "../../components/ui/google-gemini-effect";
+// import { useScroll } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CoolMode } from "../ui/cool-mode";
 // import { WavyBackground } from "../components/ui/wavy-background";
@@ -12,17 +12,13 @@ import { CoolMode } from "../ui/cool-mode";
 // import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export default function Herobanner() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+  // const ref = useRef(null);
+  // const { scrollYProgress } = useScroll({
+  //   target: ref,
+  //   offset: ["start start", "end start"],
+  // });
  
-  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
-  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
-  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
-  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
-  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+
   const comp = useRef(null);
   const [showIntro, setShowIntro] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);

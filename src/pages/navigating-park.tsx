@@ -1,6 +1,6 @@
 import Template from "../layout/template";
 import NavDescription from "../components/navigating-park/description";
-import Layout from "../layout/layout";
+// import Layout from "../layout/layout";
 
 export default function NavPark() {
   return (

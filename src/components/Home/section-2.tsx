@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {Dot} from "lucide-react"
+// import {Dot} from "lucide-react"
 // import TextRevealByWord from "../ui/text-reveal";
 // import BoxReveal from "../ui/box-reveal";
 import { Link } from "react-router-dom";

@@ -1,4 +1,4 @@
-import BoxReveal from "../ui/box-reveal";
+// import BoxReveal from "../ui/box-reveal";
 import Globe from "../ui/globe";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 
