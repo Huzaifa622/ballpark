@@ -5,6 +5,8 @@ import { AuroraBackground } from "../../components/ui/aurora-background";
 import { Vortex } from "../../components/ui/vortex";
 import { GoogleGeminiEffect } from "../../components/ui/google-gemini-effect";
 import { useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
+import { CoolMode } from "../ui/cool-mode";
 // import { WavyBackground } from "../components/ui/wavy-background";
 
 // import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
@@ -147,29 +149,24 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
         >
           <AuroraBackground className=" relative z-30" >
             <Particles
-              className="absolute inset-0 h-fit z-30"
+              className="absolute inset-0 h-fit z-10"
               quantity={100}
               ease={100}
               color={"#ffffff"}
               refresh
             />
-            <img src="/assets/background-bg.jpg" className="absolute top-0 left-0 w-full  -z-10 h-screen" />
-              <div
-               className="h-[100vh] bg-transparent w-full dark:border dark:border-white/[0.1] rounded-md relative z-10 pt-0 overflow-clip"
-               ref={ref}
-             >
-               <GoogleGeminiEffect
-                 pathLengths={[
-                   pathLengthFirst,
-                   pathLengthSecond,
-                   pathLengthThird,
-                   pathLengthFourth,
-                   pathLengthFifth,
-                 ]}
-               />
-             </div>
+            <img src="/assets/banner3.jpg" className="absolute top-0 left-0 w-full   -z-10 
+            " />
           </AuroraBackground>
         </Vortex>
+        <div className="relative h-screen flex justify-center items-center">
+            <div className="relative  w-[30%] mx-auto flex flex-col items-center  justify-center mt-40 h-screen   z-30 pointer-events-auto"> {/* Enable pointer events for content */}
+        <CoolMode>
+          <Link to={"https://ball-park-beta.vercel.app/login"} className="bg-white px-8 text-center mb-4 py-2 hover:bg-[#1B2978] hover:text-white transition-all ease-linear rounded-sm text-[#1B2978]" >Join Us</Link>
+        </CoolMode>
+        <p className="text-center">Set builders, creative agencies, and designers alike. Witness the first AI to cost your designs and technical drawings</p>
+      </div>
+      </div>
       </div>
     </div>
   );

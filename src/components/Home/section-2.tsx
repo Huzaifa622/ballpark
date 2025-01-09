@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {Dot} from "lucide-react"
 // import TextRevealByWord from "../ui/text-reveal";
 // import BoxReveal from "../ui/box-reveal";
 import { Link } from "react-router-dom";
@@ -10,13 +11,27 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Section2 = () => {
   // const gifRef = useRef<HTMLImageElement>(null);
+  const svgLineRef = useRef<SVGLineElement>(null);
   const gifRef = useRef<HTMLImageElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     audioRef.current = new Audio("/assets/break.mp3");
-
+    gsap.fromTo(
+      svgLineRef.current,
+      { strokeDasharray: "1000", strokeDashoffset: "1000" },
+      {
+        strokeDashoffset: "0",
+        duration: 2,
+        scrollTrigger: {
+          trigger: svgLineRef.current,
+          start: "top center",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      }
+    );
     // Create a timeline for the ball animation
     const ballTimeline = gsap.timeline({
       scrollTrigger: {
@@ -52,7 +67,7 @@ const Section2 = () => {
         // Smooth easing
       })
       .to("#ball", {
-        // filter: "blur(20px)",
+        filter: "blur(20px)",
         x: "-100px",
         rotation: 180, // Move to the right
         duration: 2, // Smooth duration
@@ -70,6 +85,12 @@ const Section2 = () => {
 
   return (
     <div className="w-full py-12 h-full relative bg-gradient-to-r to-[#B3DEF2] from-[#F1F6F8]">
+      
+      <div className="vertical-line-container">
+        <div className="vertical-line"></div>
+        {/* Animated Shining Line */}
+        <div className="shining-line"></div>
+      </div>
       <img
         src="/assets/ball.svg"
         className="absolute w-28 h-28 blur-3xl left-[50%]"
@@ -89,7 +110,8 @@ const Section2 = () => {
         <audio src="/assets/break.mp3" autoPlay={true} ref={audioRef} />
       </div>
 
-      <div>
+      <div className="relative" >
+      
         <div className=" mx-auto max-w-screen-2xl ">
           <div className="h-[10%]   z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-normal  flex text-[#FF007A]  justify-center items-center ">
             <h1 className="text-7xl leading-[76px] text-center flex justify-center text-[#1B2978] items-center uppercase w-[50%] mx-auto">
@@ -99,9 +121,9 @@ const Section2 = () => {
           <div className="flex w-[50%] mx-auto text-[#1B2978]  ">
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
-              <h1 className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
+               <h1 className="text-[9px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What makes an event budget?
               </h1>{" "}
               <p className="text-[19px] tracking-tight">
@@ -113,9 +135,9 @@ const Section2 = () => {
           <div className="flex w-[50%] mx-auto text-[#1B2978]  ">
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
-              <h1 className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
+               <h1 className="text-[9px] font-semibold my-4  text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl  h-1 w-1 rounded-full"></div>
                 What if budgeting could take just 5 minutes?
               </h1>{" "}
               <p className="text-[19px] tracking-tight">
@@ -127,9 +149,9 @@ const Section2 = () => {
           <div className="flex w-[50%] mx-auto text-[#1B2978]  ">
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
-              <h1 className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
+               <h1 className="text-[9px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 How It Works:
               </h1>{" "}
               <p className="text-[19px] tracking-tight">
@@ -143,9 +165,9 @@ const Section2 = () => {
           <div className="flex w-[50%] mx-auto text-[#1B2978]  ">
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
-              <h1 className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
+               <h1 className="text-[9px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What is an event shell?
               </h1>{" "}
               <p className="text-[19px] tracking-tight">
@@ -160,9 +182,9 @@ const Section2 = () => {
           <div className="flex w-[50%] mx-auto text-[#1B2978]  ">
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
-              <h1 className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
+               <h1 className="text-[9px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 But we know every event is unique. What if we need something
                 bespoke built?
               </h1>{" "}
@@ -174,23 +196,29 @@ const Section2 = () => {
                 Have a hand-drawn sketch or a rough idea? No problem. Just
                 annotate your design, and our AI will:
               </p>
-              <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
-                Calculate material costs, even for bespoke items.
+              <ul className="list-disc">
+                <li className="ml-8" >
+              <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
+                
+            Calculate material costs, even for bespoke items.
               </p>
-              <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
-                Account for substructures, so you don’t need professional
+              </li>
+              <li  className="ml-8">
+              <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
+               
+              Account for substructures, so you don’t need professional
                 technical drawings.
               </p>
+              </li>
+              </ul>
             </div>
           </div>
           <div className="flex w-[50%] mx-auto text-[#1B2978]  ">
             <div className="w-[50%]"></div>
             <div className="w-[50%]">
-              <h1 className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-8">
+               <h1 className="text-[9px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-green-500 animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 Lastly:
               </h1>{" "}
               <p className="text-[19px] tracking-tight">
@@ -217,7 +245,7 @@ const Section2 = () => {
               
               <Link
                 to={"https://ball-park-beta.vercel.app/login"}
-                className="text-white  font-semibold bg-[#FF007A] p-2 text-lg rounded-full"
+                className="text-white  font-semibold bg-[#1B2978] p-2 px-6 text-lg rounded-sm hover:bg-white hover:text-[#1B2978]"
               >
                 Let's Get Started
               </Link>

@@ -1,6 +1,31 @@
+import { useEffect, useState } from "react";
+
 export default function NavDescription() {
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const maxHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (scrollPosition / maxHeight) * 100;
+      setProgress(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
     return (
-      <div className="max-w-5xl mx-auto p-6 mt-12 z-30 example bg-gray-400  bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 h-fit overflow-hidden relative">
+      <div className="bg-[#00083C]" >
+      <div className="max-w-5xl mx-auto p-6 pt-20 z-30 example  h-fit overflow-hidden relative">
+      <div className="fixed top-0 left-0 w-full h-1 bg-gray-300">
+          <div
+            className="bg-[#FF007A] h-full transition-all"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
         <h1 className="text-3xl font-semibold text-white">MAKE AN ACCOUNT</h1>
         <p className="text-lg text-white mb-4">Head over to LOGIN and CREATE A NEW ACCOUNT.</p>
   
@@ -120,6 +145,7 @@ export default function NavDescription() {
         <p className="text-base text-white">
           If you’re teaming up with set build companies to bring your designs to life, remember that these estimates will need a little extra padding—typically anywhere from 10% to 50%, depending on the company. So, when you’re planning a budget for an event, we recommend marking it up by 50% just to be safe. And don’t forget to add a line item for workshop labour, which can vary depending on the company, as that’s where set builders really earn their keep.
         </p>
+      </div>
       </div>
     );
   }

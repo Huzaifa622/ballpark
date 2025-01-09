@@ -4,25 +4,25 @@ import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function Section3() {
   return (
-    <div className=" relative  text-white  w-[80%] mx-auto max-w-screen-2xl bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
-      <div className="flex flex-col items-center">
-        <BoxReveal>
-          <h1 className="text-center text-4xl font-bold text-[#FF007A] bg-white p-2 rounded uppercase">
-            Our Services
-          </h1>
-        </BoxReveal>
-        <div className=" z-[20] relative h-full p-4 flex items-center md:flex-row flex-col-reverse my-8  ">
+    <div className="bg-[#00083C] relative h-screen  " >
+       <div className="absolute  1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen  w-full hero_animation 1100px:left-8 1500px:left-14"></div>
+    <div className=" relative  text-white   w-[80%] mx-auto max-w-screen-2xl ">
+      <div className="flex flex-col justify-center h-screen items-center">
+      <h1 className="text-4xl text-center flex justify-center mb-12  text-white items-center uppercase w-[50%] mx-auto">
+              Our Services
+            </h1>
+        <div className=" z-[20] relative  flex items-center md:flex-row flex-col-reverse   ">
           <div className="md:w-[70%]">
             <TextGenerateEffect
-              className="text-left"
+              className="text-justify "
               words={
                 "AI-powered architecture merges innovation and efficiency, creating designs that are visually stunning, sustainable, and adaptable. Leveraging advanced algorithms, AI optimizes spatial layout, energy efficiency, and environmental harmony, enabling futuristic structures that meet global needs. The result is architecture that pushes boundaries and redefines the future of design worldwide."
               }
             />
             <TextGenerateEffect
-              className="text-left"
+              className="text-justify"
               words={
-                "This AI-built architecture is a paradigm shift, where human creativity and AI synergy deliver designs that are efficient, beautiful, and future-proof"
+                "This AI-built architecture is a paradigm shift, where human creativity and AI synergy deliver designs that are efficient, beautiful, and future-proof."
               }
             />
           </div>
@@ -33,6 +33,7 @@ export default function Section3() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

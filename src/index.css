@@ -169,3 +169,175 @@ body::-webkit-scrollbar {
   border-radius: 5px;
   width: 35px;
 }
+
+/* Section Container */
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100vh;
+  background: linear-gradient(to right, #f1f6f8, #b3def2);
+  position: relative;
+  padding-left: 100px; /* Space for the vertical line */
+}
+
+/* Vertical Line Container */
+.vertical-line-container {
+  position: absolute;
+  left: 45%;
+  top: 20%; /* Adjust spacing */
+  height: 68%;
+  width: 10px;
+}
+
+/* Static Line */
+.vertical-line {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #cccccc; /* Static line color */
+}
+
+/* Shining Line (Animated) */
+.shining-line {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(transparent, #ff007a, transparent);
+  background-size: 100% 300%;
+  animation: move-line 3s linear infinite, shine-line 1.5s ease-in-out infinite;
+}
+
+/* Line Movement */
+@keyframes move-line {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Line Shining Effect */
+@keyframes shine-line {
+  0%, 100% {
+    box-shadow: 0 0 10px 2px #ff007a88;
+  }
+  50% {
+    box-shadow: 0 0 20px 4px #ff007a;
+  }
+}
+
+/* Content Section */
+.content {
+  margin-left: 150px; /* Space between content and line */
+}
+
+.content h1 {
+  font-size: 4rem;
+  color: #1b2978;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Parent container */
+.section-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00083c; /* Fallback background */
+}
+
+/* Moving background */
+.moving-bg {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background:  #73CDDD;
+  border-radius: 50%;
+  animation: moveRandom 5s linear infinite, shine 2s ease-in-out infinite;
+  z-index: 0;
+  box-shadow: 10px 10px 20px #73CDDD, 10px 10px 40px #73CDDD;
+}
+
+/* Content */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 50%;
+  color: #ffffff;
+}
+
+.content h1 {
+  font-size: 1.875rem; /* Tailwind equivalent to text-3xl */
+  text-transform: uppercase;
+}
+
+/* Keyframes for shine animation */
+@keyframes moveRandom {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(20vw, 10vh);
+  }
+  50% {
+    transform: translate(-15vw, 30vh);
+  }
+  75% {
+    transform: translate(10vw, -20vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.hero_animation {
+  background-image: linear-gradient(147.92deg, #73cddd 10.41%, hsla(0, 0%, 100%, 0) 89.25%);
+  animation: changeBackgroundColor 8s infinite alternate;
+}
+
+@keyframes changeBackgroundColor {
+  0%, 100% {
+    opacity: 1;
+  }
+  16.67% {
+    opacity: 0.9;
+  }
+  33.33% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  66.67% {
+    opacity: 0.5;
+  }
+  83.33% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes blink {
+  0% {
+    border-color: #1B2978;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #1B2978;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+  
+}

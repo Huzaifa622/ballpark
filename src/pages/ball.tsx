@@ -6,7 +6,7 @@ const Ball = () => {
   return (
     <div className="h-screen overflow-auto example ">
       <Template>
-        <Layout />
+        {/* <Layout /> */}
         <div className="">
           <BallPark />
         </div>

@@ -6,13 +6,16 @@ import Projects from "../ui/projects";
 
 const Section4 = () => {
   return (
-    <div className="py-12 w-[80%] mx-auto my-8 bg-gray-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
+    <div className="py-12 w-[80%] mx-auto  ">
       <div className="flex justify-center font-bold">
       <BoxReveal>
-        <h1 className="text-4xl text-center text-[#FF007A] bg-white p-2 rounded" >Testimonals</h1>
+        <h1 className="text-4xl text-center text-[#1B2978] bg-white p-2 rounded mb-10" >Testimonals</h1>
       </BoxReveal>
       </div>
-         <Projects/>
+      <div className=" rounded-xl border-2 shadow-2xl shadow-[#FF007A]">
+  <Projects />
+</div>
+
     </div>
   )
 }

@@ -4,9 +4,9 @@ import Layout from "../layout/layout";
 
 export default function NavPark() {
   return (
-    <div className="h-screen  example ">
+    <div className="  example ">
     <Template>
-      <Layout />
+      {/* <Layout /> */}
       {/* <div className=""> */}
       <NavDescription />
       {/* </div> */}
