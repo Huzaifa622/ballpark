@@ -17,8 +17,8 @@ export default function Herobanner() {
   //   target: ref,
   //   offset: ["start start", "end start"],
   // });
- 
 
+  const gl = document.getElementById("glassStart");
   const comp = useRef(null);
   const [showIntro, setShowIntro] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
@@ -39,7 +39,6 @@ export default function Herobanner() {
 
   useLayoutEffect(() => {
     if (!startAnimation) return;
-
     let ctx = gsap.context(() => {
       const t1 = gsap.timeline();
       t1.to(["#title-1", "#title-2", "#title-3"], {
@@ -57,6 +56,13 @@ export default function Herobanner() {
         .from("#welcome", {
           opacity: 0,
           duration: 0.5,
+          onComplete: () => {
+            if (gl) {
+              setTimeout(() => {
+                gl.style.visibility = "visible";
+              }, 3000);
+            }
+          },
         });
     }, comp);
 
@@ -78,19 +84,20 @@ export default function Herobanner() {
       }
     );
 
-    return () => {line.kill()};
+    return () => {
+      line.kill();
+    };
   }, [showIntro]);
 
   return (
     <div className="relative" ref={comp}>
       {showIntro && (
-      
         // <BackgroundGradientAnimation  >
         <div
           id="intro-slider"
-          className=" fixed h-screen p-10 bg-gradient-to-r from-[#ffffff] to-[#73c2b7] text-[#FF007A] top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
+          className=" fixed h-screen p-10 bg-gradient-to-r  from-[#ff007a] to-[#00083C]  top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
         >
-
+          <div className="absolute  top-0 1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen  w-full hero_animation 1100px:left-8 1500px:left-14"></div>
           <svg
             version="1.1"
             id="Layer_1"
@@ -99,7 +106,11 @@ export default function Herobanner() {
             x="0px"
             y="0px"
             viewBox="0 0 1000 1000"
-            style={{ background: "new 0 0 1000 1000", cursor: "pointer" , zIndex: "50" }}
+            style={{
+              background: "new 0 0 1000 1000",
+              cursor: "pointer",
+              zIndex: "50",
+            }}
             xmlSpace="preserve"
             onClick={() => setStartAnimation(true)}
           >
@@ -108,7 +119,8 @@ export default function Herobanner() {
                 id="svg-line"
                 style={{
                   fill: "none",
-                  stroke: "#000000",
+                  stroke: "#ffffff",
+                  strokeWidth: "2px",
                   strokeMiterlimit: 10,
                   strokeDasharray: "1000",
                   strokeDashoffset: "1000",
@@ -119,21 +131,34 @@ s480.7,344.9,480.7,344.9L557.9,828.5c0,0,35.8,57.1-11.1,93.3c-22.9,17.6-54,20.7-
               <path
                 style={{
                   fill: "none",
-                  stroke: "#000000",
+                  strokeWidth: "2px",
+                  stroke: "#ffffff",
                   strokeMiterlimit: 10,
+                  transition: "stroke-width 0.3s ease", // Smooth transition for the stroke width
                 }}
+                className="hover-path"
                 d="M253.1,506.6l203.3-205.5c0,0,40.5,29.4,79.8,0l207.6,207.7
 c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9,557.9,253.1,506.6z"
               />
+              <style>
+                {`
+      .hover-path:hover {
+        stroke-width: 1px; /* Decrease stroke width on hover */
+      }
+    `}
+              </style>
             </g>
           </svg>
-          <p className="text-black z-50 uppercase tracking-widest absolute font-Roboto  text-xs top-32 animate-bounce">
+          <p className="text-white z-50 uppercase tracking-widest absolute font-Roboto  text-sm top-32 animate-bounce">
             Click to enter
           </p>
         </div>
-          // </BackgroundGradientAnimation>
-        
       )}
+      <img
+        src="/assets/broken.gif"
+        id="glassStart"
+        className="min-h-screen  z-40 fixed invisible hidden translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-screen"
+      />
 
       <div className="relative  h-screen w-full text-white">
         <Vortex
@@ -143,7 +168,7 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
           // className="bg-transparent "
           containerClassName="absolute z-30 "
         >
-          <AuroraBackground className=" relative z-30" >
+          <AuroraBackground className=" relative z-30">
             <Particles
               className="absolute inset-0 h-fit z-10"
               quantity={100}
@@ -151,18 +176,31 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
               color={"#ffffff"}
               refresh
             />
-            <img src="/assets/banner3.jpg" className="absolute top-0 left-0 w-full   -z-10 
-            " />
+            <img
+              src="/assets/banner3.jpg"
+              className="absolute top-0 left-0 w-full h-screen  -z-10 
+            "
+            />
           </AuroraBackground>
         </Vortex>
         <div className="relative h-screen flex justify-center items-center">
-            <div className="relative  w-[30%] mx-auto flex flex-col items-center  justify-center mt-40 h-screen   z-30 pointer-events-auto"> {/* Enable pointer events for content */}
-        <CoolMode>
-          <Link to={"https://ball-park-beta.vercel.app/login"} className="bg-white px-8 text-center mb-4 py-2 hover:bg-[#1B2978] hover:text-white transition-all ease-linear rounded-sm text-[#1B2978]" >Join Us</Link>
-        </CoolMode>
-        <p className="text-center">Set builders, creative agencies, and designers alike. Witness the first AI to cost your designs and technical drawings</p>
-      </div>
-      </div>
+          <div className="relative max-w-screen-2xl w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center  justify-center mt-40 h-screen   z-30 pointer-events-auto">
+            {" "}
+            {/* Enable pointer events for content */}
+            <CoolMode>
+              <Link
+                to={"https://ball-park-beta.vercel.app/login"}
+                className="bg-white px-8 text-center mb-4 py-2 hover:bg-[#1B2978] hover:text-white transition-all ease-linear rounded-sm text-[#1B2978]"
+              >
+                Join Us
+              </Link>
+            </CoolMode>
+            <p className="text-center">
+              Set builders, creative agencies, and designers alike. Witness the
+              first AI to cost your designs and technical drawings
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
