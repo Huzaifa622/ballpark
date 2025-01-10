@@ -94,7 +94,7 @@ const Section2 = () => {
       <div className="w-full" >
       <img
         src="/assets/ball.svg"
-        className="absolute hidden md:w-28 h-28 blur-3xl left-[50%]"
+        className="absolute hidden md:block md:w-28 h-28 blur-3xl left-[50%]"
         id="ball"
         alt="Ball Image"
       />

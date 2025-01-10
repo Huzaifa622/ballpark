@@ -6,7 +6,7 @@ import Projects from "../ui/projects";
 
 const Section4 = () => {
   return (
-    <div className="py-12 w-[80%] mx-auto  ">
+    <div className="py-12 w-[80%] mx-auto bg-white ">
       <div className="flex justify-center font-bold">
       <BoxReveal>
         <h1 className="text-4xl text-center text-[#1B2978] bg-white p-2 rounded mb-10" >Testimonals</h1>
