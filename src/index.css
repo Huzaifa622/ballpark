@@ -184,7 +184,7 @@ body::-webkit-scrollbar {
 /* Vertical Line Container */
 .vertical-line-container {
   position: absolute;
-  left: 45%;
+  left: 50%;
   top: 20%; /* Adjust spacing */
   height: 68%;
   width: 10px;

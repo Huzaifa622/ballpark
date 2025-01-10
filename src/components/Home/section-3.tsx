@@ -26,7 +26,7 @@ export default function Section3() {
               }
             />
           </div>
-          <div className="md:w-[50%] relative h-[30vh] md:h-[50vh]">
+          <div className="md:w-[50%] md:block hidden relative h-[30vh] md:h-[50vh]">
             {/* <div className=""> */}
             <Globe className="w-full -top-[18%] left-[50%] translate-x-[-50%]" />
             {/* </div> */}

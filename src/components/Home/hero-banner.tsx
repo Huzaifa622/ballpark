@@ -7,17 +7,9 @@ import { Vortex } from "../../components/ui/vortex";
 // import { useScroll } from "framer-motion";
 import { Link } from "react-router-dom";
 import { CoolMode } from "../ui/cool-mode";
-// import { WavyBackground } from "../components/ui/wavy-background";
 
-// import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 
 export default function Herobanner() {
-  // const ref = useRef(null);
-  // const { scrollYProgress } = useScroll({
-  //   target: ref,
-  //   offset: ["start start", "end start"],
-  // });
-
   const gl = document.getElementById("glassStart");
   const comp = useRef(null);
   const [showIntro, setShowIntro] = useState(false);
@@ -143,13 +135,13 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
               <style>
                 {`
       .hover-path:hover {
-        stroke-width: 1px; /* Decrease stroke width on hover */
+        stroke-width: 1px; 
       }
     `}
               </style>
             </g>
           </svg>
-          <p className="text-white z-50 uppercase tracking-widest absolute font-Roboto  text-sm top-32 animate-bounce">
+          <p className="text-white z-50 uppercase tracking-widest absolute font-Roboto  text-sm top-[53%] animate-bounce">
             Click to enter
           </p>
         </div>
@@ -178,13 +170,13 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
             />
             <img
               src="/assets/banner3.jpg"
-              className="absolute top-0 left-0 w-full h-screen  -z-10 
+              className="absolute top-0 left-0 w-full h-screen  object-cover -z-10 
             "
             />
           </AuroraBackground>
         </Vortex>
         <div className="relative h-screen flex justify-center items-center">
-          <div className="relative max-w-screen-2xl w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center  justify-center mt-40 h-screen   z-30 pointer-events-auto">
+          <div className="relative max-w-screen-2xl md:w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center  justify-center mt-40 h-screen   z-30 pointer-events-auto">
             {" "}
             {/* Enable pointer events for content */}
             <CoolMode>
