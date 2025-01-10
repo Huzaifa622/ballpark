@@ -10,7 +10,7 @@ import { CoolMode } from "../ui/cool-mode";
 
 
 export default function Herobanner() {
-  const gl = document.getElementById("glassStart");
+  // const gl = document.getElementById("glassStart");
   const comp = useRef(null);
   const [showIntro, setShowIntro] = useState(false);
   const [startAnimation, setStartAnimation] = useState(false);
@@ -48,13 +48,7 @@ export default function Herobanner() {
         .from("#welcome", {
           opacity: 0,
           duration: 0.5,
-          onComplete: () => {
-            if (gl) {
-              setTimeout(() => {
-                gl.style.visibility = "visible";
-              }, 3000);
-            }
-          },
+        
         });
     }, comp);
 
@@ -146,11 +140,7 @@ c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9
           </p>
         </div>
       )}
-      <img
-        src="/assets/broken.gif"
-        id="glassStart"
-        className="min-h-screen  z-40 fixed invisible hidden translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-screen"
-      />
+   
 
       <div className="relative  h-screen w-full text-white">
         <Vortex

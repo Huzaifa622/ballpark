@@ -105,7 +105,7 @@ const Section2 = () => {
           ref={gifRef}
           src={visible ? "/assets/broken.gif" : ""}
           className="fixed  h-screen  top-0"
-          style={{ visibility: "visible" }} // Initially hidden
+          style={{ visibility: "hidden" }} // Initially hidden
           // alt="Glass breaking animation"
         />
 
