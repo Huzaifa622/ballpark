@@ -1,33 +1,26 @@
 import { useLayoutEffect, useRef, useState, useEffect } from "react";
 import gsap from "gsap";
-import Particles from "../../components/ui/particles";
-import { AuroraBackground } from "../../components/ui/aurora-background";
-import { Vortex } from "../../components/ui/vortex";
-// import { GoogleGeminiEffect } from "../../components/ui/google-gemini-effect";
-// import { useScroll } from "framer-motion";
-import { Link } from "react-router-dom";
-import { CoolMode } from "../ui/cool-mode";
-
+// import Particles from "../../components/ui/particles";
+// import { AuroraBackground } from "../../components/ui/aurora-background";
+// import { Vortex } from "../../components/ui/vortex";
 
 export default function Herobanner() {
-  // const gl = document.getElementById("glassStart");
   const comp = useRef(null);
-  const [showIntro, setShowIntro] = useState(false);
+  const [showIntro, setShowIntro] = useState(true);
   const [startAnimation, setStartAnimation] = useState(false);
+  const [showGif, setShowGif] = useState(true);
 
   useEffect(() => {
-    // Check sessionStorage for the intro flag
     const hasSeenIntro = sessionStorage.getItem("hasSeenIntro");
 
-    if (!hasSeenIntro) {
+    if (hasSeenIntro) {
+      setShowIntro(false);
+      setShowGif(false);
+    } else {
       setShowIntro(true);
       sessionStorage.setItem("hasSeenIntro", "true");
     }
   }, []);
-
-  // useEffect(()=>{
-  //   setShowIntro(true);
-  // },[window.location.reload])
 
   useLayoutEffect(() => {
     if (!startAnimation) return;
@@ -48,7 +41,6 @@ export default function Herobanner() {
         .from("#welcome", {
           opacity: 0,
           duration: 0.5,
-        
         });
     }, comp);
 
@@ -75,15 +67,24 @@ export default function Herobanner() {
     };
   }, [showIntro]);
 
+  const handleEnterClick = () => {
+    setStartAnimation(true);
+    setShowIntro(false);
+    setShowGif(true);
+
+    setTimeout(() => {
+      setShowGif(false);
+    }, 5000);
+  };
+
   return (
-    <div className="relative" ref={comp}>
-      {showIntro && (
-        // <BackgroundGradientAnimation  >
+    <>
+      <div className="relative" ref={comp}>
         <div
           id="intro-slider"
-          className=" fixed h-screen p-10 bg-gradient-to-r  from-[#ff007a] to-[#00083C]  top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
+          className="fixed h-screen p-10 bg-gradient-to-r from-[#ff007a] to-[#00083C] top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
         >
-          <div className="absolute  top-0 1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen  w-full hero_animation 1100px:left-8 1500px:left-14"></div>
+          <div className="absolute top-0 1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen w-full hero_animation 1100px:left-8 1500px:left-14"></div>
           <svg
             version="1.1"
             id="Layer_1"
@@ -98,7 +99,7 @@ export default function Herobanner() {
               zIndex: "50",
             }}
             xmlSpace="preserve"
-            onClick={() => setStartAnimation(true)}
+            onClick={handleEnterClick}
           >
             <g>
               <path
@@ -112,7 +113,7 @@ export default function Herobanner() {
                   strokeDashoffset: "1000",
                 }}
                 d="M438,828.5L21.3,411.8c0,0,136-343.8,476.7-349.4
-s480.7,344.9,480.7,344.9L557.9,828.5c0,0,35.8,57.1-11.1,93.3c-22.9,17.6-54,20.7-80.2,8.5C439.9,917.9,414.1,890.2,438,828.5z"
+                s480.7,344.9,480.7,344.9L557.9,828.5c0,0,35.8,57.1-11.1,93.3c-22.9,17.6-54,20.7-80.2,8.5C439.9,917.9,414.1,890.2,438,828.5z"
               />
               <path
                 style={{
@@ -120,70 +121,78 @@ s480.7,344.9,480.7,344.9L557.9,828.5c0,0,35.8,57.1-11.1,93.3c-22.9,17.6-54,20.7-
                   strokeWidth: "2px",
                   stroke: "#ffffff",
                   strokeMiterlimit: 10,
-                  transition: "stroke-width 0.3s ease", // Smooth transition for the stroke width
+                  transition: "stroke-width 0.3s ease",
                 }}
                 className="hover-path"
                 d="M253.1,506.6l203.3-205.5c0,0,40.5,29.4,79.8,0l207.6,207.7
-c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9,557.9,253.1,506.6z"
+                c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9,557.9,253.1,506.6z"
               />
               <style>
                 {`
-      .hover-path:hover {
-        stroke-width: 1px; 
-      }
-    `}
+                .hover-path:hover {
+                  stroke-width: 1px; 
+                }
+              `}
               </style>
             </g>
           </svg>
-          <p className="text-white z-50 uppercase tracking-widest absolute font-Roboto  text-sm top-[53%] animate-bounce">
+          <p
+            onClick={handleEnterClick}
+            className="text-white z-50 cursor-pointer uppercase tracking-widest absolute font-Roboto text-sm top-[53%] animate-bounce"
+          >
             Click to enter
           </p>
         </div>
-      )}
-   
 
-      <div className="relative  h-screen w-full text-white">
-        <Vortex
-          rangeY={800}
-          particleCount={200}
-          baseHue={120}
-          // className="bg-transparent "
-          containerClassName="absolute z-30 "
-        >
-          <AuroraBackground className=" relative z-30">
-            <Particles
-              className="absolute inset-0 h-fit z-10"
-              quantity={100}
-              ease={100}
-              color={"#ffffff"}
-              refresh
-            />
-            <img
-              src="/assets/banner3.jpg"
-              className="absolute top-0 left-0 w-full h-screen  object-cover -z-10 
-            "
-            />
-          </AuroraBackground>
-        </Vortex>
-        <div className="relative h-screen flex justify-center items-center">
-          <div className="relative max-w-screen-2xl md:w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center  justify-center mt-40 h-screen   z-30 pointer-events-auto">
-            {" "}
-            {/* Enable pointer events for content */}
-            <CoolMode>
-              <Link
-                to={"https://ball-park-beta.vercel.app/login"}
-                className="bg-white px-8 text-center mb-4 py-2 hover:bg-[#1B2978] hover:text-white transition-all ease-linear rounded-sm text-[#1B2978]"
-              >
-                Join Us
-              </Link>
-            </CoolMode>
-            <p className="text-center">
-              Set builders, creative agencies, and designers alike. Witness the
-              first AI to cost your designs and technical drawings
-            </p>
+        <div className="relative h-screen w-full text-white">
+          {/* <Vortex
+            rangeY={800}
+            particleCount={200}
+            baseHue={120}
+            containerClassName="absolute z-30"
+          >
+            <AuroraBackground className="relative z-30">
+              <Particles
+                className="absolute inset-0 h-fit z-10"
+                quantity={100}
+                ease={100}
+                color={"#ffffff"}
+                refresh
+              />
+              <img
+                src="/assets/banner3.jpg"
+                className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
+              />
+            </AuroraBackground>
+          </Vortex> */}
+          <img
+            src="/assets/banner3.jpg"
+            className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
+          />
+          <div className="relative h-screen flex justify-center items-center">
+            <div className="relative max-w-screen-2xl md:w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center justify-center mt-40 h-screen z-30 pointer-events-auto">
+              {/* <CoolMode>
+                <Link
+                  to={"https://ball-park-beta.vercel.app/login"}
+                  className="bg-white px-8 text-center mb-4 py-2 hover:bg-[#1B2978] hover:text-white transition-all ease-linear rounded-sm text-[#1B2978]"
+                >
+                  Join Us
+                </Link>
+              </CoolMode>
+              <p className="text-center">
+                Set builders, creative agencies, and designers alike. Witness the
+                first AI to cost your designs and technical drawings
+              </p> */}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {showGif && !showIntro && (
+        <img
+          src="/assets/broken.gif"
+          className="min-h-screen z-40 fixed block translate-x-[-50%] translate-y-[-50%] top-1/2 left-1/2 w-screen"
+        />
+      )}
+    </>
   );
 }

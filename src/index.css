@@ -12,7 +12,7 @@
 }
 html {
   scroll-behavior: smooth;
-  font-family: "Lotion" !important;
+  /* font-family: "Lotion" !important; */
 }
 @layer base {
   :root {
