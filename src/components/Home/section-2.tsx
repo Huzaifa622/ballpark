@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Section2 = () => {
   // const gifRef = useRef<HTMLImageElement>(null);
   const svgLineRef = useRef<SVGLineElement>(null);
@@ -33,7 +32,6 @@ const Section2 = () => {
         },
       }
     );
-    // Create a timeline for the ball animation
     const ballTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: "#ball", // Target the ball image
@@ -44,7 +42,6 @@ const Section2 = () => {
       },
     });
 
-    // Add gradual left and right movements to the timeline
     ballTimeline
       .from("#ball", { filter: "blur(22px)", x: "600px" })
       .to("#ball", {
@@ -70,35 +67,28 @@ const Section2 = () => {
       .to("#ball", {
         filter: "blur(20px)",
         x: "-100px",
-        rotation: 180, // Move to the right
-        duration: 2, // Smooth duration
-        ease: "power1.inOut", // Smooth easing
+        rotation: 180,
+        duration: 2,
+        ease: "power1.inOut",
       });
-
-    // Cleanup ScrollTrigger on unmount
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
-  // useEffect(()=>{
-  //   audio.play()
-  // },[])
 
   return (
     <div className="w-full py-12 h-full relative bg-gradient-to-r to-[#B3DEF2] from-[#F1F6F8]">
-      
       <div className="vertical-line-container hidden md:block">
         <div className="vertical-line"></div>
-        {/* Animated Shining Line */}
         <div className="shining-line"></div>
       </div>
-      <div className="w-full" >
-      <img
-        src="/assets/ball.svg"
-        className="absolute hidden md:block md:w-28 h-28 blur-3xl left-[50%]"
-        id="ball"
-        alt="Ball Image"
-      />
+      <div className="w-full">
+        <img
+          src="/assets/ball.svg"
+          className="absolute hidden md:block md:w-28 h-28 blur-3xl left-[50%]"
+          id="ball"
+          alt="Ball Image"
+        />
       </div>
       <div className="w-[80%] mx-auto max-w-screen-2xl relative">
         <img
@@ -106,14 +96,12 @@ const Section2 = () => {
           ref={gifRef}
           src={visible ? "/assets/broken.gif" : ""}
           className="fixed  h-screen  top-0"
-          style={{ visibility: "hidden" }} 
+          style={{ visibility: "hidden" }}
         />
-
         <audio src="/assets/break.mp3" autoPlay={true} ref={audioRef} />
       </div>
 
-      <div className="relative" >
-      
+      <div className="relative">
         <div className=" mx-auto max-w-screen-2xl ">
           <div className="h-[10%]   z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-normal  flex text-[#FF007A]  justify-center items-center ">
             <h1 className="md:text-7xl md:leading-[76px] text-center flex justify-center text-[#1B2978] items-center uppercase w-[50%] mx-auto">
@@ -123,7 +111,7 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
             <div className="md:md:w-[70%]"></div>
             <div className="md:md:w-[45%]">
-               <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What makes an event budget?
@@ -137,7 +125,7 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-               <h1 className="text-[16px] font-semibold my-4  text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[16px] font-semibold my-4  text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-[#ff007a] animate-ping drop-shadow-2xl  h-1 w-1 rounded-full"></div>
                 What if budgeting could take just 5 minutes?
@@ -151,7 +139,7 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-               <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 How It Works:
@@ -167,7 +155,7 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-               <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What is an event shell?
@@ -184,7 +172,7 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-               <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 But we know every event is unique. What if we need something
@@ -199,26 +187,24 @@ const Section2 = () => {
                 annotate your design, and our AI will:
               </p>
               <ul className="list-disc">
-                <li className="ml-8" >
-              <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
-                
-            Calculate material costs, even for bespoke items.
-              </p>
-              </li>
-              <li  className="ml-8">
-              <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
-               
-              Account for substructures, so you don’t need professional
-                technical drawings.
-              </p>
-              </li>
+                <li className="ml-8">
+                  <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
+                    Calculate material costs, even for bespoke items.
+                  </p>
+                </li>
+                <li className="ml-8">
+                  <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
+                    Account for substructures, so you don’t need professional
+                    technical drawings.
+                  </p>
+                </li>
               </ul>
             </div>
           </div>
           <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-               <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 Lastly:
@@ -234,17 +220,12 @@ const Section2 = () => {
           <div>
             <div className="flex flex-col items-center justify-center">
               {" "}
-
-           
-                <h1
-                  className="text-center w-[60%] mx-auto  md:text-4xl font-bold my-4 text-[#1B2978]
+              <h1
+                className="text-center w-[60%] mx-auto  md:text-4xl font-bold my-4 text-[#1B2978]
                                            p-2 rounded uppercase"
-                >
-                  {
-                    "No more smoke and mirrors. Lets get onto the enjoyable stuff"
-                  }
-                </h1>
-              
+              >
+                {"No more smoke and mirrors. Lets get onto the enjoyable stuff"}
+              </h1>
               <Link
                 to={"https://ball-park-beta.vercel.app/login"}
                 className="text-white  font-semibold bg-[#1B2978] p-2 px-6 text-lg rounded-sm hover:bg-white hover:text-[#1B2978]"
@@ -252,7 +233,6 @@ const Section2 = () => {
                 Let's Get Started
               </Link>
             </div>
-      
           </div>
         </div>
       </div>
