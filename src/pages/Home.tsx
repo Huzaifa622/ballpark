@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Herobanner from "../components/Home/hero-banner";
 import Section2 from "../components/Home/section-2";
@@ -8,7 +8,7 @@ import Section4 from "../components/Home/section-4";
 import Section1 from "../components/Home/section-1";
 
 const Home = () => {
-  const [progress, setProgress] = useState<number>(0);
+  // const [progress, setProgress] = useState<number>(0);
   const [currentComponentIndex, setCurrentComponentIndex] = useState<number>(0);
   const [showBlackDivs, setShowBlackDivs] = useState<boolean>(false);
   const [scrollDirection, setScrollDirection] = useState<
@@ -50,18 +50,17 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    const handleProgress = () => {
-      const scrollPosition = window.scrollY;
-      const maxHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = (scrollPosition / maxHeight) * 100;
-      setProgress(scrolled);
-    };
-
-    window.addEventListener("scroll", handleProgress);
-    return () => window.removeEventListener("scroll", handleProgress);
-  }, []);
+  // useEffect(() => {
+  //   const handleProgress = () => {
+  //     const scrollPosition = window.scrollY;
+  //     const maxHeight =
+  //       document.documentElement.scrollHeight - window.innerHeight;
+  //     const scrolled = (scrollPosition / maxHeight) * 100;
+  //     setProgress(scrolled);
+  //   };
+  //   window.addEventListener("scroll", handleProgress);
+  //   return () => window.removeEventListener("scroll", handleProgress);
+  // }, []);
 
   const slideInVariants = {
     forward: {
@@ -77,17 +76,16 @@ const Home = () => {
   };
 
   const renderSection = () => {
-    console.log(currentComponentIndex, "currentComponentIndex");
     switch (currentComponentIndex) {
       case 0:
         return (
           <>
-            <div className="fixed top-0 left-0 w-full h-1 z-40 bg-gray-300">
+            {/* <div className="fixed top-0 left-0 w-full h-1 z-40 bg-gray-300">
               <div
                 className="bg-[#FF007A] h-full transition-all"
                 style={{ width: `${progress}%` }}
               />
-            </div>
+            </div> */}
             <Herobanner />
           </>
         );
