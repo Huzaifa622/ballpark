@@ -170,7 +170,7 @@ export default function Herobanner() {
             className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
           />
           <div className="relative h-screen flex justify-center items-center">
-            <div className="relative max-w-screen-2xl md:w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center justify-center mt-40 h-screen z-30 pointer-events-auto">
+            <div className="relative max-w-screen-2xl md:w-[30%] 2xl:w-[20%] mx-auto flex flex-col items-center justify-center h-screen z-30 pointer-events-auto">
               {/* <CoolMode>
                 <Link
                   to={"https://ball-park-beta.vercel.app/login"}

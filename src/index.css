@@ -207,7 +207,7 @@ body::-webkit-scrollbar {
   left: 0;
   width: 1px;
   height: 100%;
-  background: linear-gradient(transparent, #ff007a, transparent);
+  background: linear-gradient(transparent, #00083C, transparent);
   background-size: 100% 300%;
   animation: move-line 3s linear infinite, shine-line 1.5s ease-in-out infinite;
 }
@@ -305,6 +305,9 @@ body::-webkit-scrollbar {
   background-image: linear-gradient(147.92deg, #73cddd 10.41%, hsla(0, 0%, 100%, 0) 89.25%);
   animation: changeBackgroundColor 8s infinite alternate;
 }
+.hero_animation_color {
+  background-color: #00083C;
+}
 
 @keyframes changeBackgroundColor {
   0%, 100% {
@@ -342,4 +345,39 @@ body::-webkit-scrollbar {
 .animate-blink {
   animation: blink 1s infinite;
   
+}
+
+.black-div {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #00083C;
+  z-index: 10;
+}
+
+.black-div.top {
+  top: 0;
+}
+
+.black-div.bottom {
+  bottom: 0;
+}
+
+.black-div.top,
+.black-div.bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background: #00083C;
+  z-index: 10;
+}
+
+.black-div.top {
+  top: 0;
+}
+
+.black-div.bottom {
+  bottom: 0;
 }

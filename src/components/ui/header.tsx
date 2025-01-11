@@ -1,7 +1,4 @@
-// import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-// import {  useLocation } from "react-router-dom";
-// import { scrollTo } from "../../lib/scroll"; // Assuming scrollTo is defined elsewhere
 import TransitionLink from "../TransitionLink";
 import ToggleSwitch from "./hamburger";
 import { useEffect, useState } from "react";
@@ -9,9 +6,6 @@ import { cn } from "../../lib/utils";
 
 export default function Header() {
   const [open, setOpen] = useState<boolean>(false);
-  // const location = useLocation();
-
-  // GSAP animation setup
 
   useEffect(() => {
     if (open) {
@@ -33,17 +27,6 @@ export default function Header() {
     }
   }, [open]);
 
-  // Handle scrolling on the homepage or redirecting on other pages
-  // const handleScrollOrRedirect = (sectionId:string) => {
-  //   if (location.pathname === "/") {
-  //     // If on homepage, scroll to the section
-  //     scrollTo(sectionId);
-  //   } else {
-  //     // If on another route, navigate to the homepage and scroll to the section
-  //     window.location.href = `/#${sectionId}`;
-  //   }
-  // };
-
   return (
     <div className="fixed z-40 w-full  " >
     <div className="w-[80%]  mx-auto bg-transparent text-white h-10">
@@ -58,9 +41,6 @@ export default function Header() {
           />
         </h1>
         <div className="flex gap-4">
-          {/* "About" section */}
-
-          {/* Link to Navigating Park */}
           <h1 className="cursor-pointer   relative z-40">
             <ToggleSwitch setOpen={setOpen} open={open} />
           </h1>
@@ -98,15 +78,6 @@ export default function Header() {
                      className="transition-all ease-out duration-200 hover:ml-4 p-2 rounded-sm hover:bg-[#1B2978] hover:text-white"
                 />
               </h4>
-              {/* <h4  className="h-8">
-                <TransitionLink
-                  label="contact"
-                  href="/contact"
-                  setOpen={setOpen}
-                     className="transition-all ease-out duration-200 hover:ml-4 p-2 rounded-sm hover:bg-[#1B2978] hover:text-white"
-                />
-              </h4> */}
-           
             </div>
           </div>
         </div>

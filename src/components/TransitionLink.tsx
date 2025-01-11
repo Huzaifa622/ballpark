@@ -19,6 +19,7 @@ const TransitionLink = ({ href, label , className , setOpen }: Props) => {
       setOpen(false)
       animatePageOut(href, navigate); 
     }
+    console.log(location , 'location')
   };
 
   return (

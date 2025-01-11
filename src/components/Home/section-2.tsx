@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 const Section2 = () => {
   // const gifRef = useRef<HTMLImageElement>(null);
   const svgLineRef = useRef<SVGLineElement>(null);
