@@ -76,7 +76,7 @@ export default function Section1() {
           <div className="relative w-full h-screen overflow-hidden">
             <div
               id="intro-slider"
-              className="h-screen p-10 top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
+              className="h-screen p-10 top-0 left-0 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
             >
               <div className="absolute top-0 1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen w-full 1100px:left-8 1500px:left-14"></div>
               <svg
@@ -89,7 +89,7 @@ export default function Section1() {
                 viewBox="0 0 1000 1000"
                 style={{
                   background: "new 0 0 1000 1000",
-                  zIndex: "50",
+                  zIndex: "20",
                 }}
                 xmlSpace="preserve"
               >
@@ -128,7 +128,7 @@ export default function Section1() {
                   </style>
                 </g>
               </svg>
-              <p className="text-white z-50 uppercase tracking-widest absolute font-Roboto text-sm top-[53%] animate-bounce">
+              <p className="text-white z-20 uppercase tracking-widest absolute font-Roboto text-sm top-[53%] animate-bounce">
                 Ball Park
               </p>
             </div>
