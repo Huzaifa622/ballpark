@@ -77,7 +77,7 @@ const Section2 = () => {
   }, []);
 
   return (
-    <div className="w-full py-12 h-full relative bg-gradient-to-r to-[#B3DEF2] from-[#F1F6F8]">
+    <div className="w-full py-12 h-full relative bg-[#081546]">
       <div className="vertical-line-container hidden md:block">
         <div className="vertical-line"></div>
         <div className="shining-line"></div>
@@ -103,48 +103,48 @@ const Section2 = () => {
 
       <div className="relative">
         <div className=" mx-auto max-w-screen-2xl ">
-          <div className="h-[10%]   z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-normal  flex text-[#FF007A]  justify-center items-center ">
-            <h1 className="md:text-7xl md:leading-[76px] text-center flex justify-center text-[#1B2978] items-center uppercase w-[50%] mx-auto">
-              Plan Your <br /> Event Budget <br /> in Minutes
+          <div className="h-[10%]   z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-normal  flex text-white  justify-center items-center ">
+            <h1 className="md:text-5xl md:leading-[76px] text-center flex justify-center text-white items-center uppercase w-[50%] mx-auto">
+              Plan Your Event <br />  Budget in Minutes
             </h1>
           </div>
-          <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
+          <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:md:w-[70%]"></div>
             <div className="md:md:w-[45%]">
-              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What makes an event budget?
               </h1>{" "}
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 Venue + Hire furniture + Staff + AV + Event Shell + Bespoke
                 features = Ballpark cost.
               </p>
             </div>
           </div>
-          <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
+          <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[16px] font-semibold my-4  text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[12px] font-semibold my-4  text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl  h-1 w-1 rounded-full"></div>
+                <div className="bg-white animate-ping drop-shadow-2xl  h-1 w-1 rounded-full"></div>
                 What if budgeting could take just 5 minutes?
               </h1>{" "}
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 Say goodbye to endless emails and numerous open tabs. And say
                 hello to the future of budgeting.
               </p>
             </div>
           </div>
-          <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
+          <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 How It Works:
               </h1>{" "}
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 We are partnering with hire companies, venues, staff providers,
                 and AV specialists across the UK. They upload their pictures and
                 prices directly to our platform, so you can browse, compare, and
@@ -152,15 +152,15 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
+          <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What is an event shell?
               </h1>{" "}
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 An event shell is something that could be used and rebranded
                 throughout many events. This can include anything from a stall
                 to a DJ booth. We have drawings and their sizes with their raw
@@ -169,20 +169,20 @@ const Section2 = () => {
               </p>
             </div>
           </div>
-          <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
+          <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 But we know every event is unique. What if we need something
                 bespoke built?
               </h1>{" "}
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 That’s why we’ve developed something groundbreaking: the world’s
                 first AI that calculates costs from images.
               </p>
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 Have a hand-drawn sketch or a rough idea? No problem. Just
                 annotate your design, and our AI will:
               </p>
@@ -201,15 +201,15 @@ const Section2 = () => {
               </ul>
             </div>
           </div>
-          <div className="flex w-[60%] mx-auto text-[#1B2978]  ">
+          <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[16px] font-semibold my-4 text-[#ff007a]  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
-                <div className="bg-[#ff007a] animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
+                <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 Lastly:
               </h1>{" "}
-              <p className="text-[16px] tracking-tight">
+              <p className="text-[12px] tracking-tight ps-4 mb-8">
                 Now you’ve costed for everything. What’s next? We have a built
                 in invoicing system. You can simply use the drop downs to
                 calculate the birds eye view cost. You then can either ‘save as
@@ -221,14 +221,13 @@ const Section2 = () => {
             <div className="flex flex-col items-center justify-center">
               {" "}
               <h1
-                className="text-center w-[60%] mx-auto  md:text-4xl font-bold my-4 text-[#1B2978]
-                                           p-2 rounded uppercase"
+                className="text-center w-[60%] mx-auto md:text-4xl font-bold my-4 text-white p-2 rounded uppercase"
               >
-                {"No more smoke and mirrors. Lets get onto the enjoyable stuff"}
+                No more smoke and mirrors. Lets get onto the enjoyable stuff
               </h1>
               <Link
                 to={"https://ball-park-beta.vercel.app/login"}
-                className="text-white  font-semibold bg-[#1B2978] p-2 px-6 text-lg rounded-sm hover:bg-white hover:text-[#1B2978]"
+                className="text-white  font-semibold bg-[#1B2978] p-2 px-6 text-lg rounded-sm hover:bg-[#1b2978c4] hover:text-white"
               >
                 Let's Get Started
               </Link>

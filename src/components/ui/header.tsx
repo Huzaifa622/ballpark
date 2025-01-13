@@ -31,6 +31,9 @@ export default function Header() {
     <div className="fixed z-40 w-full  " >
     <div className="w-[80%]  mx-auto bg-transparent text-white h-10">
       <div className="font-signika absolute items-center text-xs top-4 flex justify-between w-[80%] logo text-center bg-transparent tracking-widest uppercase leading-[50px] font-bold">
+        <div>
+          {/*  */}
+        </div>
         <h1 className="text-lg flex gap-2 items-center relative z-40">
           <div className="bg-[#E84A9B] animate-ping drop-shadow-2xl  h-1 w-1 rounded-full"></div>{" "}
           <TransitionLink
@@ -61,6 +64,14 @@ export default function Header() {
                 {" "}
                 <h6 className="text-[#1B2978] font-light" >Ball</h6>
                 <h6 className={cn("text-[#1B2978] opacity-50 hover:opacity-100 transition-all ease-linear duration-300")} >Park</h6>
+              </h4>
+              <h4 className="h-8">
+                <TransitionLink
+                  label="Join Us"
+                  href="https://ball-park-beta.vercel.app/login"
+                  setOpen={setOpen}
+                     className="transition-all ease-out duration-200 hover:ml-4 p-2 rounded-sm hover:bg-[#1B2978] hover:text-white"
+                />
               </h4>
               <h4 className="h-8  ">
                 <TransitionLink

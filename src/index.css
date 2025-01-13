@@ -187,8 +187,8 @@ body::-webkit-scrollbar {
 .vertical-line-container {
   position: absolute;
   left: 50%;
-  top: 20%; /* Adjust spacing */
-  height: 68%;
+  top: 18%;
+  height: 65%;
   width: 10px;
 }
 
@@ -225,10 +225,10 @@ body::-webkit-scrollbar {
 /* Line Shining Effect */
 @keyframes shine-line {
   0%, 100% {
-    box-shadow: 0 0 10px 2px #ff007a88;
+    box-shadow: 0 0 10px 2px #fff;
   }
   50% {
-    box-shadow: 0 0 20px 4px #ff007a;
+    box-shadow: 0 0 20px 4px #fff;
   }
 }
 
