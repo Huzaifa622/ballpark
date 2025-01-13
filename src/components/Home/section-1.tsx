@@ -1,7 +1,51 @@
+import { useEffect, useLayoutEffect, useRef } from "react";
 import Particles from "../ui/particles";
-import { motion } from "framer-motion";
+import gsap from "gsap";
 
 export default function Section1() {
+  const comp = useRef<HTMLDivElement | null>(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const t1 = gsap.timeline();
+      t1.to(["#title-1", "#title-2", "#title-3"], {
+        opacity: 0,
+        y: "-=30",
+        delay: 0.3,
+        stagger: 0.5,
+      })
+        .to("#intro-slider", {
+          opacity: 0,
+          zIndex: 0,
+          duration: 1.3,
+        })
+        .from("#welcome", {
+          opacity: 0,
+          duration: 0.5,
+        });
+    }, comp);
+
+    return () => ctx.revert();
+  }, []);
+
+  useEffect(() => {
+    const line = gsap.timeline({ repeat: -1 });
+    line.fromTo(
+      "#svg-line",
+      { strokeDasharray: "1000", strokeDashoffset: "1000" },
+      {
+        strokeDashoffset: "0",
+        duration: 2,
+        ease: "power1.inOut",
+        repeatDelay: 1,
+      }
+    );
+
+    return () => {
+      line.kill();
+    };
+  }, []);
+
   return (
     <div className="flex justify-end relative items-end h-[100vh] bg-[#00083C] overflow-hidden w-full">
       <Particles
@@ -14,9 +58,7 @@ export default function Section1() {
       <div className="absolute  1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen  w-full hero_animation 1100px:left-8 1500px:left-14"></div>
 
       <div className="flex flex-col justify-end relative items-end h-[100vh] p-5">
-        {/* Bottom section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 w-full">
-          {/* Left Column - Text */}
           <div className="flex flex-col justify-end items-start text-white">
             <h1 className="text-[24px] my-2 text-[#ffffff] capitalize w-[100%]">
               Did you enter the creative industry to spend your time crunching
@@ -31,135 +73,66 @@ export default function Section1() {
               list.
             </h1>
           </div>
-
-          {/* Right Column - Animated SVG */}
-          <motion.div
-            className="flex justify-center items-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-          >
-            <svg
-              viewBox="0 0 672 655"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="ecosystem-svg"
-              width="560"
+          <div className="relative w-full h-screen overflow-hidden">
+            <div
+              id="intro-slider"
+              className="h-screen p-10 top-0 left-0 z-50 font-spaceGrotesk w-full flex flex-col items-center gap-10 tracking-tight"
             >
-              <circle
-                cx={336}
-                cy={123}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={458}
-                cy={209}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={549}
-                cy={328}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={458}
-                cy={453}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={336}
-                cy={532}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={215}
-                cy={453}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={123}
-                cy={328}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={214}
-                cy={209}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-              <circle
-                cx={335}
-                cy={328}
-                r={122}
-                stroke="#ffffff"
-                style={{ opacity: 1, visibility: "inherit" }}
-              />
-            </svg>
-          </motion.div>
-          {/* <motion.div
-        className="animate-background"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <svg
-          viewBox="0 0 672 655"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="relative md:h-[96vh]"
-          color="white"
-        >
-          {[ // Circle coordinates
-            { cx: 336, cy: 123 },
-            { cx: 458, cy: 209 },
-            { cx: 549, cy: 328 },
-            { cx: 458, cy: 453 },
-            { cx: 336, cy: 532 },
-            { cx: 215, cy: 453 },
-            { cx: 123, cy: 328 },
-            { cx: 214, cy: 209 },
-          ].map((circle, index) => (
-            <motion.circle
-              key={index}
-              cx={circle.cx}
-              cy={circle.cy}
-              r="122"
-              stroke="white"
-              strokeWidth="2"
-              initial={{ pathLength: 0, strokeDashoffset: 1000 }} // Start with invisible circles
-              animate={{ 
-                pathLength: 1, // Draw the circle
-                strokeDashoffset: 0, // Reset the offset to make it visible
-              }}
-              transition={{
-                duration: 2,
-                ease: "easeInOut",
-                repeat: Infinity, // Make the animation loop
-                repeatType: "loop",
-                delay: index * 0.3, // Stagger the circles to create a flowing effect
-              }}
-              className="transition-all duration-300 hover:stroke-2 hover:shadow-lg"
-            />
-          ))}
-
-        </svg>
-      </motion.div> */}
+              <div className="absolute top-0 1500px:h-[700px] 1500px:w-[700px] 1100px:h-[600px] 1100px:w-[600px] h-screen w-full 1100px:left-8 1500px:left-14"></div>
+              <svg
+                version="1.1"
+                id="Layer_1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 1000 1000"
+                style={{
+                  background: "new 0 0 1000 1000",
+                  zIndex: "50",
+                }}
+                xmlSpace="preserve"
+              >
+                <g>
+                  <path
+                    id="svg-line"
+                    style={{
+                      fill: "none",
+                      stroke: "#ffffff",
+                      strokeWidth: "2px",
+                      strokeMiterlimit: 10,
+                      strokeDasharray: "1000",
+                      strokeDashoffset: "1000",
+                    }}
+                    d="M438,828.5L21.3,411.8c0,0,136-343.8,476.7-349.4
+                s480.7,344.9,480.7,344.9L557.9,828.5c0,0,35.8,57.1-11.1,93.3c-22.9,17.6-54,20.7-80.2,8.5C439.9,917.9,414.1,890.2,438,828.5z"
+                  />
+                  <path
+                    style={{
+                      fill: "none",
+                      strokeWidth: "2px",
+                      stroke: "#ffffff",
+                      strokeMiterlimit: 10,
+                      transition: "stroke-width 0.3s ease",
+                    }}
+                    className="hover-path"
+                    d="M253.1,506.6l203.3-205.5c0,0,40.5,29.4,79.8,0l207.6,207.7
+                c0,0-30,43.6-0.9,88L536.6,806.7c0,0-23-25.3-75.8,0L253.1,588.6C253.1,588.6,283.9,557.9,253.1,506.6z"
+                  />
+                  <style>
+                    {`
+                .hover-path:hover {
+                  stroke-width: 1px; 
+                }
+              `}
+                  </style>
+                </g>
+              </svg>
+              <p className="text-white z-50 uppercase tracking-widest absolute font-Roboto text-sm top-[53%] animate-bounce">
+                Ball Park
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
