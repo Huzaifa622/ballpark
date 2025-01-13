@@ -98,14 +98,14 @@ const Section2 = () => {
           className="fixed  h-screen  top-0"
           style={{ visibility: "hidden" }}
         />
-        <audio src="/assets/break.mp3" autoPlay={true} ref={audioRef} />
+        <audio src="/assets/break.mp3" autoPlay={false} ref={audioRef} />
       </div>
 
       <div className="relative">
         <div className=" mx-auto max-w-screen-2xl ">
           <div className="h-[10%]   z-40 top-0 px-2 uppercase mx-auto text-4xl py-8 font-normal  flex text-white  justify-center items-center ">
             <h1 className="md:text-5xl md:leading-[76px] text-center flex justify-center text-white items-center uppercase w-[50%] mx-auto">
-              Plan Your Event <br />  Budget in Minutes
+              Plan Your Event <br /> Budget in Minutes
             </h1>
           </div>
           <div className="flex w-[60%] mx-auto text-white  ">
@@ -220,9 +220,7 @@ const Section2 = () => {
           <div>
             <div className="flex flex-col items-center justify-center">
               {" "}
-              <h1
-                className="text-center w-[60%] mx-auto md:text-4xl font-bold my-4 text-white p-2 rounded uppercase"
-              >
+              <h1 className="text-center w-[60%] mx-auto md:text-4xl font-bold my-4 text-white p-2 rounded uppercase">
                 No more smoke and mirrors. Lets get onto the enjoyable stuff
               </h1>
               <Link
