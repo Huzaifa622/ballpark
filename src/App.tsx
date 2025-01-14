@@ -5,6 +5,7 @@ import HomeLayout from "./layout/home-layout";
 import NavPark from "./pages/navigating-park";
 
 import Ball from "./pages/ball";
+import Contactus from "./pages/Contactus";
 // import Template from "./layout/template";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="navigating-park" element={<NavPark />} />
             <Route path="ball-park" element={<Ball />} />
+            <Route path="contact-us" element={<Contactus />} />
           </Route>
         </Routes>
       {/* </Template> */}

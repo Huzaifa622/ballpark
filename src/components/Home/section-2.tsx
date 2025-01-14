@@ -111,12 +111,12 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:md:w-[70%]"></div>
             <div className="md:md:w-[45%]">
-              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[15px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What makes an event budget?
               </h1>{" "}
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 Venue + Hire furniture + Staff + AV + Event Shell + Bespoke
                 features = Ballpark cost.
               </p>
@@ -125,12 +125,12 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[12px] font-semibold my-4  text-white  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[15px] font-semibold my-4  text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-white animate-ping drop-shadow-2xl  h-1 w-1 rounded-full"></div>
                 What if budgeting could take just 5 minutes?
               </h1>{" "}
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 Say goodbye to endless emails and numerous open tabs. And say
                 hello to the future of budgeting.
               </p>
@@ -139,12 +139,12 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[15px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 How It Works:
               </h1>{" "}
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 We are partnering with hire companies, venues, staff providers,
                 and AV specialists across the UK. They upload their pictures and
                 prices directly to our platform, so you can browse, compare, and
@@ -155,12 +155,12 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[15px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 What is an event shell?
               </h1>{" "}
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 An event shell is something that could be used and rebranded
                 throughout many events. This can include anything from a stall
                 to a DJ booth. We have drawings and their sizes with their raw
@@ -172,28 +172,28 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[15px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 But we know every event is unique. What if we need something
                 bespoke built?
               </h1>{" "}
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 That’s why we’ve developed something groundbreaking: the world’s
                 first AI that calculates costs from images.
               </p>
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 Have a hand-drawn sketch or a rough idea? No problem. Just
                 annotate your design, and our AI will:
               </p>
               <ul className="list-disc">
                 <li className="ml-8">
-                  <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
+                  <p className="text-[12px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
                     Calculate material costs, even for bespoke items.
                   </p>
                 </li>
                 <li className="ml-8">
-                  <p className="text-[9px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
+                  <p className="text-[12px] font-semibold my-4 tracking-widest uppercase flex items-center gap-4 ">
                     Account for substructures, so you don’t need professional
                     technical drawings.
                   </p>
@@ -204,12 +204,12 @@ const Section2 = () => {
           <div className="flex w-[60%] mx-auto text-white  ">
             <div className="md:w-[70%]"></div>
             <div className="md:w-[45%]">
-              <h1 className="text-[12px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
+              <h1 className="text-[15px] font-semibold my-4 text-white  tracking-widest uppercase flex items-center gap-4">
                 {" "}
                 <div className="bg-white animate-ping drop-shadow-2xl shadow-green-700 h-1 w-1 rounded-full"></div>
                 Lastly:
               </h1>{" "}
-              <p className="text-[12px] tracking-tight ps-4 mb-8">
+              <p className="text-[15px] tracking-tight ps-4 mb-8">
                 Now you’ve costed for everything. What’s next? We have a built
                 in invoicing system. You can simply use the drop downs to
                 calculate the birds eye view cost. You then can either ‘save as
@@ -225,7 +225,8 @@ const Section2 = () => {
               </h1>
               <Link
                 to={"https://ball-park-beta.vercel.app/login"}
-                className="text-white  font-semibold bg-[#1B2978] p-2 px-6 text-lg rounded-sm hover:bg-[#1b2978c4] hover:text-white"
+                // className="text-white  font-semibold bg-[#1B2978] p-2 px-6 text-lg rounded-sm hover:bg-[#1b2978c4] hover:text-white"
+                className="bg-white text-black rounded-md p-3 px-6 flex justify-center items-center hover:bg-black hover:text-white transition-all"
               >
                 Let's Get Started
               </Link>

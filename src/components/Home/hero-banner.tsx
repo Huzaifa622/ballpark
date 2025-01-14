@@ -158,6 +158,7 @@ export default function Herobanner() {
           </Vortex> */}
           <img
             src="/assets/banner3.jpg"
+            // src="/assets/banner_new.jpg"
             className="absolute top-0 left-0 w-full h-screen object-cover -z-10"
           />
           <div className="relative h-screen flex justify-center items-center">

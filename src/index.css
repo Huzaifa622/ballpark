@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&family=Signika:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face{
+@font-face {
   font-family: "Lotion";
-  src: local("Lausanne") , url("./fonts/Lausanne.woff") , format("woff");
+  src: local("Lausanne"), url("./fonts/Lausanne.woff"), format("woff");
 }
 html {
   scroll-behavior: smooth;
@@ -16,11 +16,9 @@ html {
 }
 @layer base {
   :root {
-    --radius: 0.5rem
+    --radius: 0.5rem;
   }
 }
-
-
 
 body::-webkit-scrollbar {
   display: none;
@@ -61,21 +59,20 @@ body::-webkit-scrollbar {
 
 @keyframes gradientBackgroundAnimation {
   0% {
-    --gradient-background-start: #B3DEF2;
-    --gradient-background-end: #F1F6F8;
+    --gradient-background-start: #b3def2;
+    --gradient-background-end: #f1f6f8;
   }
   50% {
-    --gradient-background-start: #FF007A;
-    --gradient-background-end: #B3DEF2;
+    --gradient-background-start: #ff007a;
+    --gradient-background-end: #b3def2;
   }
   100% {
-    --gradient-background-start: #B3DEF2;
-    --gradient-background-end: #F1F6F8;
+    --gradient-background-start: #b3def2;
+    --gradient-background-end: #f1f6f8;
   }
 }
 
-
-/* From Uiverse.io by vinodjangid07 */ 
+/* From Uiverse.io by vinodjangid07 */
 .switch input {
   opacity: 0;
   width: 0;
@@ -187,8 +184,8 @@ body::-webkit-scrollbar {
 .vertical-line-container {
   position: absolute;
   left: 50%;
-  top: 18%;
-  height: 65%;
+  top: 16%;
+  height: 70%;
   width: 10px;
 }
 
@@ -207,7 +204,7 @@ body::-webkit-scrollbar {
   left: 0;
   width: 1px;
   height: 100%;
-  background: linear-gradient(transparent, #00083C, transparent);
+  background: linear-gradient(transparent, #00083c, transparent);
   background-size: 100% 300%;
   animation: move-line 3s linear infinite, shine-line 1.5s ease-in-out infinite;
 }
@@ -224,7 +221,8 @@ body::-webkit-scrollbar {
 
 /* Line Shining Effect */
 @keyframes shine-line {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 10px 2px #fff;
   }
   50% {
@@ -261,11 +259,11 @@ body::-webkit-scrollbar {
   position: absolute;
   width: 150px;
   height: 150px;
-  background:  #73CDDD;
+  background: #73cddd;
   border-radius: 50%;
   animation: moveRandom 5s linear infinite, shine 2s ease-in-out infinite;
   z-index: 0;
-  box-shadow: 10px 10px 20px #73CDDD, 10px 10px 40px #73CDDD;
+  box-shadow: 10px 10px 20px #73cddd, 10px 10px 40px #73cddd;
 }
 
 /* Content */
@@ -302,15 +300,20 @@ body::-webkit-scrollbar {
 }
 
 .hero_animation {
-  background-image: linear-gradient(147.92deg, #73cddd 10.41%, hsla(0, 0%, 100%, 0) 89.25%);
+  background-image: linear-gradient(
+    147.92deg,
+    hsla(0, 0%, 100%, 0) 10.41%,
+    #73cddd 89.25%
+  );
   animation: changeBackgroundColor 8s infinite alternate;
 }
 .hero_animation_color {
-  background-color: #00083C;
+  background-color: #00083c;
 }
 
 @keyframes changeBackgroundColor {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   16.67% {
@@ -332,19 +335,18 @@ body::-webkit-scrollbar {
 
 @keyframes blink {
   0% {
-    border-color: #1B2978;
+    border-color: #1b2978;
   }
   50% {
     border-color: transparent;
   }
   100% {
-    border-color: #1B2978;
+    border-color: #1b2978;
   }
 }
 
 .animate-blink {
   animation: blink 1s infinite;
-  
 }
 
 .black-div {
@@ -352,7 +354,7 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #00083C;
+  background: #00083c;
   z-index: 10;
 }
 
@@ -370,7 +372,7 @@ body::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 50vh;
-  background: #00083C;
+  background: #00083c;
   z-index: 10;
 }
 
